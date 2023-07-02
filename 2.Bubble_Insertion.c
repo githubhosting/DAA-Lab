@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-void bubbleSortExample(int arr[], int num)
+void bubbleSort(int arr[], int num)
 {
     int x, y, temp;
     for (x = 0; x < num - 1; x++)
@@ -45,7 +45,7 @@ int main()
     clock_t start, end;
     float cpu_time_used;
     start = clock();
-    bubbleSortExample(arr, n);
+    bubbleSort(arr, n);
     end = clock();
     cpu_time_used = ((float)(end - start)) / CLOCKS_PER_SEC;
     printf("\nTime taken for Bubble Sort: %f", cpu_time_used);

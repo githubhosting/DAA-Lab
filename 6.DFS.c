@@ -24,7 +24,7 @@ int main()
     scanf("%d", &v);
 
     printf("DFS ORDER OF VISITED VERTICES: ");
-    printf("%d ", v);
+    printf("%d ", v); // visit the initial vertex
     visited[v] = 1;
     k = 1;
     while (k < n)

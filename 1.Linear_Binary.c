@@ -40,7 +40,7 @@ int main(void)
     (lresult == -1)
         ? printf("Element is not present in array")
         : printf("Element is present at index %d", lresult);
-    cpu_time_used = ((float)(end - start)) / ((float)(CLOCKS_PER_SEC));
+    cpu_time_used = ((float)(end - start)) / CLOCKS_PER_SEC;
     printf("\nTime taken for Linear Search: %f", cpu_time_used);
 
     start = clock();
@@ -49,7 +49,7 @@ int main(void)
     (bresult == -1)
         ? printf("\nElement is not present in array")
         : printf("\nElement is present at index %d", bresult);
-    cpu_time_used = ((float)(end - start)) / ((float)(CLOCKS_PER_SEC));
+    cpu_time_used = ((float)(end - start)) / CLOCKS_PER_SEC;
     printf("\nTime taken for Binary Search: %f", cpu_time_used);
     return 0;
 }
