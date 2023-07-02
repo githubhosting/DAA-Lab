@@ -2,7 +2,8 @@
 
 #include <bits/stdc++.h>
 #include <iostream>
-#include <ctime>
+#include <time.h>
+
 using namespace std;
 
 int partition(int arr[], int low, int high)
@@ -35,10 +36,12 @@ int main()
 {
     int arr[] = {10, 7, 1, 9, 8, 5, 3, 76, 67, 23, 13, 75, 86};
     int N = sizeof(arr) / sizeof(arr[0]);
-    
-    clock_t begin_time = clock();
+
+    clock_t start, end;
+    start = clock();
     quickSort(arr, 0, N - 1);
-    cout << "Time taken by program is : " << float(clock() - begin_time) / float(CLOCKS_PER_SEC) << "\n";
+    end = clock();
+    cout << "Time taken for insertion sort: " << (float(end - start) / CLOCKS_PER_SEC) << " sec \n";
 
     cout << "Sorted array: " << endl;
     for (int i = 0; i < N; i++)
