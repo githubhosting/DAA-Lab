@@ -1,3 +1,5 @@
+// DFS traversal of a graph using stack as an auxiliary data structure
+
 #include <stdio.h>
 #include <stdlib.h>
 
