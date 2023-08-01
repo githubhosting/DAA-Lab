@@ -12,7 +12,7 @@ void main()
     printf("Kruskal's algorithm in C\n");
     printf("========================\n");
 
-    printf("Enter the no. of vertices:\n");
+    printf("Enter the no. of vertices: ");
     scanf("%d", &n);
 
     printf("\nEnter the cost adjacency matrix:\n");
