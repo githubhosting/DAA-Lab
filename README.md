@@ -190,10 +190,14 @@ Enter no. of vertices: 5
 
 Enter the adjacency matrix:
 
-0 1 2 0 0 
+0 1 2 0 0
+
 1 0 2 0 4
+
 2 2 0 3 0
+
 0 0 3 0 2
+
 0 4 0 2 0
 
 ## Krushkal Input:
@@ -203,7 +207,11 @@ Enter no. of vertices: 5
 Enter the cost adjacency matrix:
 
 0 1 2 0 1
+
 1 0 3 0 1
+
 2 3 0 6 5
+
 0 0 6 0 0
+
 1 1 5 0 0
