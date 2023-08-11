@@ -1,13 +1,14 @@
 #include <iostream>
 using namespace std;
 #include <time.h>
+
 int Linear_search()
 {
     int arr[10], n, i, num, index;
     clock_t start, end;
     cout << "Linear Search: Enter Number of elements: ";
     cin >> n;
-    cout << "Enter the Elements";
+    cout << "Enter the Elements: ";
     for (i = 0; i < n; i++)
         cin >> arr[i];
     cout << "\n Enter a Number to Search: ";
@@ -23,13 +24,12 @@ int Linear_search()
     }
     cout << "\nFound at Index No." << index;
     end = clock();
-    cout << "Time taken :" << (end - start) / CLOCKS_PER_SEC << " sec , Linear Search ";
-    cout << endl;
+    cout << "\nTime taken :" << (end - start) / CLOCKS_PER_SEC << " sec , Linear Search.";
     return 0;
 }
 int Binary_search()
 {
-    int i, arr[10], n, num, first, last, middle;
+    int i, arr[10], n, num, low, high, mid;
     clock_t start, end;
     cout << "Binary Search: Enter number of elements";
     cin >> n;
@@ -39,31 +39,30 @@ int Binary_search()
     cout << "\nEnter Element to be Search: ";
     cin >> num;
     start = clock();
-    first = 0;
-    last = n - 1;
-    middle = (first + last) / 2;
-    while (first <= last)
+    low = 0;
+    high = n - 1;
+    while (low <= high)
     {
-        if (arr[middle] < num)
-            first = middle + 1;
-        else if (arr[middle] == num)
+        mid = (low + high) / 2;
+        if (arr[mid] < num)
+            low = mid + 1;
+        else if (arr[mid] == num)
         {
-            cout << "\nThe number, " << num << " found at Position " << middle + 1;
+            cout << "\nThe number, " << num << " found at Position " << mid + 1;
             break;
         }
         else
-            last = middle - 1;
-        middle = (first + last) / 2;
+            high = mid - 1;
     }
-    if (first > last)
+    if (low > high)
         cout << "\nThe number, " << num << " is not found in given Array";
     end = clock();
-    cout << "Time taken :" << (end - start) / CLOCKS_PER_SEC << " sec , Binary Search ";
+    cout << "\nTime taken :" << (end - start) / CLOCKS_PER_SEC << " sec , Binary Search ";
     cout << endl;
     return 0;
 }
 int main()
 {
-    Binary_search();
     Linear_search();
+    Binary_search();
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include <time.h>
+
 long int middle_school(long int m, long int n)
 {
     long int i, gcd;
@@ -8,13 +9,11 @@ long int middle_school(long int m, long int n)
     start = clock();
     for (i = 1; i <= m && i <= n; ++i)
     {
-        // Checks if i is factor of both integers
         if (m % i == 0 && n % i == 0)
             gcd = i;
     }
     end = clock();
-    cout << endl
-         << "Time taken:" << (end - start) / CLOCKS_PER_SEC << " sec , GCD ";
+    cout << "Time taken: " << (float(end - start) / CLOCKS_PER_SEC) << " sec , GCD ";
     return gcd;
 }
 
@@ -30,8 +29,7 @@ long int euclid(long int m, long int n)
         n = r;
     }
     end = clock();
-    cout << endl
-         << "Time taken:" << (end - start) / CLOCKS_PER_SEC << " sec , GCD ";
+    cout << "Time taken: " << (float(end - start) / CLOCKS_PER_SEC) << " sec , GCD ";
     return m;
 }
 
@@ -55,28 +53,17 @@ long int sub(long int m, long int n)
     }
 
     end = clock();
-    cout << "Time taken :" << (end - start) / CLOCKS_PER_SEC << " sec , GCD ";
+    cout << "Time taken: " << (float(end - start) / CLOCKS_PER_SEC) << " sec , GCD ";
     return m;
 }
 
 main()
 {
     long int x, y;
-    cout << "\t\t ANALYSIS OF THE TWO ALGORITHMS" << endl
-         << endl;
-    cout << "GCD : " << endl;
-    cout << "enter two numbers:";
+    cout << "\t\t ANALYSIS OF THE TWO ALGORITHMS" << endl;
+    cout << "GCD : Enter Two numbers: ";
     cin >> x >> y;
-    cout << endl
-         << endl
-         << "GCD-Middle School : " << middle_school(x, y);
-    cout << endl
-         << endl
-         << "GCD-Euclid : " << euclid(x, y);
-    cout << endl
-         << endl
-         << "------------------------------------------------";
-    cout << endl
-         << endl
-         << "GCD- subtraction : " << sub(x, y);
+    cout << "\nGCD-Middle School : " << middle_school(x, y);
+    cout << "\nGCD-Euclid : " << euclid(x, y);
+    cout << "\nGCD-Subtraction : " << sub(x, y);
 }

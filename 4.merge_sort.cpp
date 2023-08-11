@@ -8,8 +8,8 @@ void Merge(int *a, int low, int high, int mid)
 {
     int i, j, k, temp[high - low + 1];
     i = low;
-    k = 0;
     j = mid + 1;
+    k = 0;
 
     while (i <= mid && j <= high)
     {

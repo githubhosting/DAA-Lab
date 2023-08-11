@@ -12,7 +12,7 @@ void insertionSort(int *array, int size)
     int key, j;
     for (int i = 1; i < size; i++)
     {
-        key = array[i]; // take value
+        key = array[i]; 
         j = i;
         while (j > 0 && array[j - 1] > key)
         {
@@ -22,16 +22,16 @@ void insertionSort(int *array, int size)
         array[j] = key; // insert in right place
     }
 }
+
 void bubblesort(int *a, int size)
 {
     int i, j;
     for (i = 0; i < size - 1; i++)
-
-        // Last i elements are already in place
         for (j = 0; j < size - i - 1; j++)
             if (a[j] > a[j + 1])
                 swap(a[j], a[j + 1]);
 }
+
 int main()
 {
     int n;
