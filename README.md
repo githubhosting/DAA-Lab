@@ -184,34 +184,126 @@ int uni(int i, int j)
 
 </details>
 
-## Prims Input: 
+## Prims Input/Output: 
 
+```bash 
 Enter no. of vertices: 5
-
 Enter the adjacency matrix:
-
 0 1 2 0 0
-
 1 0 2 0 4
-
 2 2 0 3 0
-
 0 0 3 0 2
-
 0 4 0 2 0
 
-## Krushkal Input:
+spanning tree matrix:
 
+0	1	2	0	0	
+1	0	0	0	0	
+2	0	0	3	0	
+0	0	3	0	2	
+0	0	0	2	0	
+
+Total cost of spanning tree = 8
+```
+
+## Krushkal Input/Output:
+
+Example 1: 
+
+```bash
 Enter no. of vertices: 5
-
 Enter the cost adjacency matrix:
 
 0 1 2 0 1
-
 1 0 3 0 1
-
 2 3 0 6 5
-
 0 0 6 0 0
-
 1 1 5 0 0
+
+The edges of Minimum Cost Spanning Tree are
+1 edge (1,2) = 1
+2 edge (1,5) = 1
+3 edge (1,3) = 2
+4 edge (3,4) = 6
+
+Minimum cost = 10
+```
+Example 2:
+```bash
+Kruskal's algorithm in C
+========================
+Enter the no. of vertices: 6
+Enter the cost adjacency matrix:
+0 3 1 6 0 0
+3 0 5 0 3 0
+1 5 0 5 6 4
+6 0 5 0 0 2
+0 3 6 0 0 6
+0 0 4 2 6 0
+The edges of Minimum Cost Spanning Tree are
+1 edge (1,3) = 1
+2 edge (4,6) = 2
+3 edge (1,2) = 3
+4 edge (2,5) = 3
+5 edge (3,6) = 4
+
+Minimum cost = 13
+```
+
+## Dijkstra Input/Output:
+
+```bash
+Enter no. of vertices: 5
+Enter the adjacency matrix:
+0 10 0 30 100
+10 0 50 0 0
+0 50 0 20 10
+30 0 20 0 60
+100 0 10 60 0
+
+Enter the starting node:0
+
+Distance of node1=10
+Path=1<-0
+Distance of node2=50
+Path=2<-3<-0
+Distance of node3=30
+Path=3<-0
+Distance of node4=60
+Path=4<-2<-3<-0
+```
+
+## Travelling Salesman Input/Output:
+
+```bash
+Enter No.of Cities: 6
+Enter Cost Matrix: 
+
+Enter Elements of Row #: 1
+99 10 15 20 99 8
+Enter Elements of Row #: 2
+5 99 9 10 8 99
+Enter Elements of Row #: 3
+6 13 99 12 99 5
+Enter Elements of Row #: 4
+8 8 9 99 6 99
+Enter Elements of Row #: 5
+99 10 99 6 99 99
+Enter Elements of Row #: 6
+10 99 5 99 99 99
+
+The cost list is:
+
+99	10	15	20	99	8
+5	99	9	10	8	99
+6	13	99	12	99	5
+8	8	9	99	6	99
+99	10	99	6	99	99
+10	99	5	99	99	99
+
+The Path is:
+
+1->6->3->4->5->2->1
+
+Minimum cost: 46
+```

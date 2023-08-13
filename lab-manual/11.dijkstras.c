@@ -5,7 +5,7 @@ void dijkstra(int G[MAX][MAX], int n, int startnode);
 int main()
 {
     int G[MAX][MAX], i, j, n, u;
-    printf("Enter no. of vertices:");
+    printf("Enter no. of vertices: ");
     scanf("%d", &n);
     printf("\nEnter the adjacency matrix:\n");
     for (i = 0; i < n; i++)
@@ -64,8 +64,8 @@ void dijkstra(int G[MAX][MAX], int n, int startnode)
     for (i = 0; i < n; i++)
         if (i != startnode)
         {
-            printf("\nDistance of node%d=%d", i, distance[i]);
-            printf("\nPath=%d", i);
+            printf("\nDistance of node%d= %d", i, distance[i]);
+            printf("\nPath= %d", i);
             j = i;
             do
             {

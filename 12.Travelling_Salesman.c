@@ -10,17 +10,17 @@ void get()
     printf("\nEnter Cost Matrix: \n");
     for (i = 0; i < n; i++)
     {
-        printf("\nEnter Elements of Row #: %d\n", i + 1);
+        // printf("\nEnter Elements of Row #: %d\n", i + 1);
         for (j = 0; j < n; j++)
             scanf("%d", &a[i][j]);
         visited[i] = 0;
     }
-    printf("\nThe cost list is:\n");
+    printf("\n\nThe cost list is:\n");
     for (i = 0; i < n; i++)
     {
-        printf("\n\n");
+        printf("\n");
         for (j = 0; j < n; j++)
-            printf("\t%d", a[i][j]);
+            printf("%d ", a[i][j]);
     }
 }
 int least(int c)
