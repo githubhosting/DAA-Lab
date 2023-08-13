@@ -69,7 +69,7 @@ int prims()
                 min_distance = distance[i];
             }
         u = from[v];
-        
+
         // insert the edge in spanning tree
         spanning[u][v] = distance[v];
         spanning[v][u] = distance[v];

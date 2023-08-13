@@ -14,11 +14,13 @@ int Linear_search()
     cout << "\n Enter a Number to Search: ";
     cin >> num;
     start = clock();
+    int flag = 0;
     for (i = 0; i < n; i++)
     {
         if (arr[i] == num)
         {
             index = i;
+            flag = 1;
             break;
         }
     }

@@ -19,7 +19,7 @@ int main()
 void dijkstra(int G[MAX][MAX], int n, int startnode)
 {
     int cost[MAX][MAX], distance[MAX], pred[MAX];
-    int visited[MAX], count, mindistance, nextnode, i, j;
+    int visited[MAX], count, min_distance, nextnode, i, j;
     // pred[] stores the predecessor of each node
     // count gives the number of nodes seen so far
     // create the cost matrix
@@ -41,21 +41,21 @@ void dijkstra(int G[MAX][MAX], int n, int startnode)
     count = 1;
     while (count < n - 1)
     {
-        mindistance = INFINITY;
+        min_distance = INFINITY;
         // nextnode gives the node at minimum distance
         for (i = 0; i < n; i++)
-            if (distance[i] < mindistance && !visited[i])
+            if (distance[i] < min_distance && !visited[i])
             {
-                mindistance = distance[i];
+                min_distance = distance[i];
                 nextnode = i;
             }
         // check if a better path exists through nextnode
         visited[nextnode] = 1;
         for (i = 0; i < n; i++)
             if (!visited[i])
-                if (mindistance + cost[nextnode][i] < distance[i])
+                if (min_distance + cost[nextnode][i] < distance[i])
                 {
-                    distance[i] = mindistance + cost[nextnode][i];
+                    distance[i] = min_distance + cost[nextnode][i];
                     pred[i] = nextnode;
                 }
         count++;

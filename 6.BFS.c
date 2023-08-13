@@ -22,7 +22,7 @@ void bfs(int v)
 main()
 {
     int v, i, j;
-    printf("\n Enter the number of vertices:");
+    printf("\n Enter the number of vertices: ");
     scanf("%d", &n);
     for (i = 0; i < n; i++) // mark all the vertices as not visited
     {
