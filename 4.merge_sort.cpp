@@ -69,7 +69,7 @@ int main()
     start = clock();
     MergeSort(arr, 0, n - 1);
     end = clock();
-    cout << "Time taken by program is : " << (float(end - start) / CLOCKS_PER_SEC) << " sec\n";
+    cout << "Time taken by program is : " << ((float)(end - start)) / CLOCKS_PER_SEC << " sec\n";
 
     cout << "\nSorted Data: ";
     for (int i = 0; i < n; i++)
