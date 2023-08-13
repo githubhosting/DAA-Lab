@@ -5,7 +5,7 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include<time.h>
+#include <time.h>
 // Number of vertices in the graph
 #define V 9
 
@@ -39,7 +39,7 @@ void printSolution(int dist[])
 void dijkstra(int graph[V][V], int src)
 {
 	int dist[V]; // The output array. dist[i] will hold the
-				// shortest
+				 // shortest
 	// distance from src to i
 
 	bool sptSet[V]; // sptSet[i] will be true if vertex i is
@@ -56,7 +56,8 @@ void dijkstra(int graph[V][V], int src)
 	dist[src] = 0;
 
 	// Find shortest path for all vertices
-	for (int count = 0; count < V - 1; count++) {
+	for (int count = 0; count < V - 1; count++)
+	{
 		// Pick the minimum distance vertex from the set of
 		// vertices not yet processed. u is always equal to
 		// src in the first iteration.
@@ -73,9 +74,7 @@ void dijkstra(int graph[V][V], int src)
 			// there is an edge from u to v, and total
 			// weight of path from src to v through u is
 			// smaller than current value of dist[v]
-			if (!sptSet[v] && graph[u][v]
-				&& dist[u] != INT_MAX
-				&& dist[u] + graph[u][v] < dist[v])
+			if (!sptSet[v] && graph[u][v] && dist[u] != INT_MAX && dist[u] + graph[u][v] < dist[v])
 				dist[v] = dist[u] + graph[u][v];
 	}
 
@@ -87,25 +86,24 @@ void dijkstra(int graph[V][V], int src)
 int main()
 {
 	/* Let us create the example graph discussed above */
-	int graph[V][V] = { { 0, 4, 0, 0, 0, 0, 0, 8, 0 },
-						{ 4, 0, 8, 0, 0, 0, 0, 11, 0 },
-						{ 0, 8, 0, 7, 0, 4, 0, 0, 2 },
-						{ 0, 0, 7, 0, 9, 14, 0, 0, 0 },
-						{ 0, 0, 0, 9, 0, 10, 0, 0, 0 },
-						{ 0, 0, 4, 14, 10, 0, 2, 0, 0 },
-						{ 0, 0, 0, 0, 0, 2, 0, 1, 6 },
-						{ 8, 11, 0, 0, 0, 0, 1, 0, 7 },
-						{ 0, 0, 2, 0, 0, 0, 6, 7, 0 } };
+	int graph[V][V] = {{0, 4, 0, 0, 0, 0, 0, 8, 0},
+					   {4, 0, 8, 0, 0, 0, 0, 11, 0},
+					   {0, 8, 0, 7, 0, 4, 0, 0, 2},
+					   {0, 0, 7, 0, 9, 14, 0, 0, 0},
+					   {0, 0, 0, 9, 0, 10, 0, 0, 0},
+					   {0, 0, 4, 14, 10, 0, 2, 0, 0},
+					   {0, 0, 0, 0, 0, 2, 0, 1, 6},
+					   {8, 11, 0, 0, 0, 0, 1, 0, 7},
+					   {0, 0, 2, 0, 0, 0, 6, 7, 0}};
 
 	// Function call
-	 clock_t start, end;
-    float cpu_time_used;
-    start = clock();
-    dijkstra(graph, 0);
-    end = clock();
-     cpu_time_used = ((float)(end - start)) / CLOCKS_PER_SEC;
-    printf("\nTime complexity is: %f", cpu_time_used);
-	
+	clock_t start, end;
+	float cpu_time_used;
+	start = clock();
+	dijkstra(graph, 0);
+	end = clock();
+	cpu_time_used = ((float)(end - start)) / CLOCKS_PER_SEC;
+	printf("\nTime complexity is: %f", cpu_time_used);
 
 	return 0;
 }
