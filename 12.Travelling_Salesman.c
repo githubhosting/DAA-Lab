@@ -65,7 +65,7 @@ void put()
 int main()
 {
     get();
-    printf("\n\nThe Path is:\n\n");
+    printf("\n\nThe Path is: ");
     mincost(0);
     put();
     return 0;

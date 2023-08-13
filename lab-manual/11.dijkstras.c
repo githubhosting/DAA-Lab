@@ -11,7 +11,7 @@ int main()
     for (i = 0; i < n; i++)
         for (j = 0; j < n; j++)
             scanf("%d", &G[i][j]);
-    printf("\nEnter the starting node:");
+    printf("\nEnter the starting node: ");
     scanf("%d", &u);
     dijkstra(G, n, u);
     return 0;

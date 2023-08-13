@@ -211,15 +211,15 @@ Total cost of spanning tree = 8
 Example 1: 
 
 ```bash
-Enter no. of vertices: 5
+Kruskal's algorithm in C
+========================
+Enter the no. of vertices: 5
 Enter the cost adjacency matrix:
-
 0 1 2 0 1
 1 0 3 0 1
 2 3 0 6 5
 0 0 6 0 0
 1 1 5 0 0
-
 The edges of Minimum Cost Spanning Tree are
 1 edge (1,2) = 1
 2 edge (1,5) = 1
@@ -255,22 +255,21 @@ Minimum cost = 13
 ```bash
 Enter no. of vertices: 5
 Enter the adjacency matrix:
-0 10 0 30 100
-10 0 50 0 0
-0 50 0 20 10
-30 0 20 0 60
-100 0 10 60 0
+0 1 0 3 9
+1 0 5 0 0
+0 5 0 2 1
+3 0 2 0 6
+9 0 1 6 0
 
-Enter the starting node:0
-
-Distance of node1=10
-Path=1<-0
-Distance of node2=50
-Path=2<-3<-0
-Distance of node3=30
-Path=3<-0
-Distance of node4=60
-Path=4<-2<-3<-0
+Enter the starting node: 0
+Distance of node1= 1
+Path= 1<-0
+Distance of node2= 5
+Path= 2<-3<-0
+Distance of node3= 3
+Path= 3<-0
+Distance of node4= 6
+Path= 4<-2<-3<-0
 ```
 
 ## Travelling Salesman Input/Output:
@@ -301,9 +300,7 @@ The cost list is:
 99	10	99	6	99	99
 10	99	5	99	99	99
 
-The Path is:
-
-1->6->3->4->5->2->1
+The Path is: 1->6->3->4->5->2->1
 
 Minimum cost: 46
 ```
