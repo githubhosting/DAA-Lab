@@ -211,7 +211,7 @@ Total cost of spanning tree = 8
 Example 1: 
 
 ```bash
-Kruskal's algorithm in C
+Kruskals algorithm in C
 ========================
 Enter the no. of vertices: 5
 Enter the cost adjacency matrix:
@@ -220,6 +220,7 @@ Enter the cost adjacency matrix:
 2 3 0 6 5
 0 0 6 0 0
 1 1 5 0 0
+
 The edges of Minimum Cost Spanning Tree are
 1 edge (1,2) = 1
 2 edge (1,5) = 1
@@ -230,7 +231,7 @@ Minimum cost = 10
 ```
 Example 2:
 ```bash
-Kruskal's algorithm in C
+Kruskals algorithm in C
 ========================
 Enter the no. of vertices: 6
 Enter the cost adjacency matrix:
@@ -240,6 +241,7 @@ Enter the cost adjacency matrix:
 6 0 5 0 0 2
 0 3 6 0 0 6
 0 0 4 2 6 0
+
 The edges of Minimum Cost Spanning Tree are
 1 edge (1,3) = 1
 2 edge (4,6) = 2
@@ -277,7 +279,6 @@ Path= 4<-2<-3<-0
 ```bash
 Enter No.of Cities: 6
 Enter Cost Matrix: 
-
 Enter Elements of Row #: 1
 99 10 15 20 99 8
 Enter Elements of Row #: 2

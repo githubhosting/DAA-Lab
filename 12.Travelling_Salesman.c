@@ -10,7 +10,7 @@ void get()
     printf("\nEnter Cost Matrix: \n");
     for (i = 0; i < n; i++)
     {
-        // printf("\nEnter Elements of Row #: %d\n", i + 1);
+        // printf("Enter Elements of Row #: %d\n", i + 1);
         for (j = 0; j < n; j++)
             scanf("%d", &a[i][j]);
         visited[i] = 0;
