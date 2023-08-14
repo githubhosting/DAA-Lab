@@ -41,7 +41,7 @@ int main()
     start = clock();
     quickSort(arr, 0, N - 1);
     end = clock();
-    cout << "Time taken for insertion sort: " << ((float)(end - start)) / CLOCKS_PER_SEC << " sec \n";
+    cout << "Time taken for quick sort: " << ((float)(end - start)) / CLOCKS_PER_SEC << " sec \n";
 
     cout << "Sorted array: " << endl;
     for (int i = 0; i < N; i++)
