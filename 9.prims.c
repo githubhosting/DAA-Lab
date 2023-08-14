@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #define infinity 9999
 #define MAX 20
 
-int G[MAX][MAX], spanning[MAX][MAX], n;
-
-int prims();
+int prims(int G[MAX][MAX], int spanning[MAX][MAX], int n);
 
 int main()
 {
+    int G[MAX][MAX], spanning[MAX][MAX], n;
     int i, j, total_cost;
     printf("Enter no. of vertices: ");
     scanf("%d", &n);
@@ -17,7 +15,7 @@ int main()
     for (i = 0; i < n; i++)
         for (j = 0; j < n; j++)
             scanf("%d", &G[i][j]);
-    total_cost = prims();
+    total_cost = prims(G, spanning, n);
     printf("\nspanning tree matrix:\n");
     for (i = 0; i < n; i++)
     {
@@ -29,7 +27,7 @@ int main()
     return 0;
 }
 
-int prims()
+int prims(int G[MAX][MAX], int spanning[MAX][MAX], int n)
 {
     int cost[MAX][MAX];
     int u, v, min_distance, distance[MAX], from[MAX];
